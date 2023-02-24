@@ -67,7 +67,8 @@ class Televisor {
         return this.color;
     }
 
-    //methods
+
+
     public prenderApagar():void {
         if(this.estaPrendido == false){
             this.estaPrendido = true;
@@ -103,10 +104,18 @@ class Televisor {
     }
 }
 
-//Instancias
 let televisor1 : Televisor = new Televisor(true, 155, 73, "Samsung", true, "Negro");
-let televisor2 : Televisor = new Televisor(false, 0, 0, "LG", true, "Blanco");
+let televisor2 : Televisor = new Televisor(false, 35, 50, "LG", true, "Blanco");
 
-console.log(televisor1);
-console.log(televisor2);
+//console.log(televisor1);
+//console.log(televisor2);
+console.log(televisor1.getMarca());
+televisor1.prenderApagar();
+
+console.log(televisor1.getEstaPrendido());
+
+console.log(televisor2.getMarca());
+
+televisor2.prenderApagar();
+console.log(televisor2.getEstaPrendido());
 

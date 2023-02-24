@@ -45,7 +45,6 @@ var Televisor = /** @class */ (function () {
     Televisor.prototype.getColor = function () {
         return this.color;
     };
-    //methods
     Televisor.prototype.prenderApagar = function () {
         if (this.estaPrendido == false) {
             this.estaPrendido = true;
@@ -79,8 +78,13 @@ var Televisor = /** @class */ (function () {
     };
     return Televisor;
 }());
-//Instancias
 var televisor1 = new Televisor(true, 155, 73, "Samsung", true, "Negro");
-var televisor2 = new Televisor(false, 0, 0, "LG", true, "Blanco");
-console.log(televisor1);
-console.log(televisor2);
+var televisor2 = new Televisor(false, 35, 50, "LG", true, "Blanco");
+//console.log(televisor1);
+//console.log(televisor2);
+console.log(televisor1.getMarca());
+televisor1.prenderApagar();
+console.log(televisor1.getEstaPrendido());
+console.log(televisor2.getMarca());
+televisor2.prenderApagar();
+console.log(televisor2.getEstaPrendido());

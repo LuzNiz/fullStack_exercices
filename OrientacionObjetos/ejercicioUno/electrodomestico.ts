@@ -6,12 +6,12 @@ class Electrodomestico {
     private weight :number;
 
     //CONSTRUCTOR
-    constructor(){
-        this.name = " ";
-        this.price = 0;
-        this.color = " ";
-        this.energyConsumption = 100;
-        this.weight = 0;
+    constructor(name: string, price: number, color :string, energyConsumption :number, weight :number){
+        this.name = name;
+        this.price = price;
+        this.color = color;
+        this.energyConsumption = energyConsumption;
+        this.weight = weight;
     }
 
     //SET and GET of the name 
@@ -79,5 +79,4 @@ class Electrodomestico {
             return false;
         }
     }
-
 }
