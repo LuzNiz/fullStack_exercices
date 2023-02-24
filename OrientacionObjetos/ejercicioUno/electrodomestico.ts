@@ -1,26 +1,38 @@
-class Electrodomestico {
-    private name :string;
+export class Electrodomestico {
+    private type :string;
+    private marca :string;
     private price :number;
     private color :string;
     private energyConsumption :number;
     private weight :number;
 
     //CONSTRUCTOR
-    constructor(name: string, price: number, color :string, energyConsumption :number, weight :number){
-        this.name = name;
+    constructor(type: string, marca : string, price: number, color :string, energyConsumption :number, weight :number){
+        this.type = type;
+        this.marca = marca;
         this.price = price;
         this.color = color;
         this.energyConsumption = energyConsumption;
         this.weight = weight;
     }
 
-    //SET and GET of the name 
-    public setName(name : string) :void {
-        this.name = name;
+    //SET and GET of the type 
+    public setType(type : string) :void {
+        this.type = type;
     }
-    public getName():String {
-        return this.name;
+    public getType():String {
+        return this.type;
     }
+
+    public setMarca(marca : string) :void {
+        this.type = marca;
+    }
+    public getMarca():String {
+        return this.marca;
+    }
+
+
+
 
     //SET and GET of the price
     public setPrice(price :number) :void{
@@ -69,7 +81,7 @@ class Electrodomestico {
     }
 
     public calcularBalance (): number{
-        return this.price / this.price;
+        return this.price / this.weight;
     }
 
     public highEnd(): boolean {
@@ -79,4 +91,5 @@ class Electrodomestico {
             return false;
         }
     }
+
 }

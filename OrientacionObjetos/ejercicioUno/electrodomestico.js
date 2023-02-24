@@ -1,18 +1,28 @@
+"use strict";
+exports.__esModule = true;
+exports.Electrodomestico = void 0;
 var Electrodomestico = /** @class */ (function () {
     //CONSTRUCTOR
-    function Electrodomestico() {
-        this.name = " ";
-        this.price = 0;
-        this.color = " ";
-        this.energyConsumption = 100;
-        this.weight = 0;
+    function Electrodomestico(type, marca, price, color, energyConsumption, weight) {
+        this.type = type;
+        this.marca = marca;
+        this.price = price;
+        this.color = color;
+        this.energyConsumption = energyConsumption;
+        this.weight = weight;
     }
-    //SET and GET of the name 
-    Electrodomestico.prototype.setName = function (name) {
-        this.name = name;
+    //SET and GET of the type 
+    Electrodomestico.prototype.setType = function (type) {
+        this.type = type;
     };
-    Electrodomestico.prototype.getName = function () {
-        return this.name;
+    Electrodomestico.prototype.getType = function () {
+        return this.type;
+    };
+    Electrodomestico.prototype.setMarca = function (marca) {
+        this.type = marca;
+    };
+    Electrodomestico.prototype.getMarca = function () {
+        return this.marca;
     };
     //SET and GET of the price
     Electrodomestico.prototype.setPrice = function (price) {
@@ -52,7 +62,7 @@ var Electrodomestico = /** @class */ (function () {
         }
     };
     Electrodomestico.prototype.calcularBalance = function () {
-        return this.price / this.price;
+        return this.price / this.weight;
     };
     Electrodomestico.prototype.highEnd = function () {
         if (this.calcularBalance() > 3) {
@@ -64,3 +74,4 @@ var Electrodomestico = /** @class */ (function () {
     };
     return Electrodomestico;
 }());
+exports.Electrodomestico = Electrodomestico;
