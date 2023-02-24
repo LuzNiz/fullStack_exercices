@@ -5,6 +5,15 @@ class Electrodomestico {
     private energyConsumption :number;
     private weight :number;
 
+    //CONSTRUCTOR
+    constructor(){
+        this.name = " ";
+        this.price = 0;
+        this.color = " ";
+        this.energyConsumption = 100;
+        this.weight = 0;
+    }
+
     //SET and GET of the name 
     public setName(name : string) :void {
         this.name = name;

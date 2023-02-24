@@ -1,5 +1,11 @@
 var Electrodomestico = /** @class */ (function () {
+    //CONSTRUCTOR
     function Electrodomestico() {
+        this.name = " ";
+        this.price = 0;
+        this.color = " ";
+        this.energyConsumption = 100;
+        this.weight = 0;
     }
     //SET and GET of the name 
     Electrodomestico.prototype.setName = function (name) {
