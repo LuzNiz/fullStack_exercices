@@ -59,12 +59,12 @@ class Electrodomestico {
         }
     }
 
-    public balance (): number{
+    public calcularBalance (): number{
         return this.price / this.price;
     }
 
     public highEnd(): boolean {
-        if(this.balance() > 3){
+        if(this.calcularBalance() > 3){
             return true;
         }else {
             return false;

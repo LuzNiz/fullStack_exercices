@@ -45,11 +45,11 @@ var Electrodomestico = /** @class */ (function () {
             return false;
         }
     };
-    Electrodomestico.prototype.balance = function () {
+    Electrodomestico.prototype.calcularBalance = function () {
         return this.price / this.price;
     };
     Electrodomestico.prototype.highEnd = function () {
-        if (this.balance() > 3) {
+        if (this.calcularBalance() > 3) {
             return true;
         }
         else {
