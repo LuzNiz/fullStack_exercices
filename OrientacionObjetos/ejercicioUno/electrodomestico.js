@@ -1,7 +1,7 @@
 var Electrodomestico = /** @class */ (function () {
     function Electrodomestico() {
     }
-    //SET and GET of the name
+    //SET and GET of the name 
     Electrodomestico.prototype.setName = function (name) {
         this.name = name;
     };
@@ -52,7 +52,9 @@ var Electrodomestico = /** @class */ (function () {
         if (this.balance() > 3) {
             return true;
         }
-        return false;
+        else {
+            return false;
+        }
     };
     return Electrodomestico;
 }());

@@ -66,8 +66,9 @@ class Electrodomestico {
     public highEnd(): boolean {
         if(this.balance() > 3){
             return true;
+        }else {
+            return false;
         }
-        return false;
     }
 
 }
