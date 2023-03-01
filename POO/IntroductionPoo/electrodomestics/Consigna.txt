@@ -1,0 +1,6 @@
+Crear la clase Electrodomestico con las siguientes caracteristicas: nombre, precio base, color, consumo energetico 
+y peso (implementar un constructor con todos los parametros) La funcionalidad de la clase debe ser:
+-Todos los metodos get y set
+-Comprobar si el electrodomestico es de bajo consumo (valor booleano)
+-Calcular el balance (costo dividido peso)
+-Indicar si es un producto de alta gama(balance mayor que 3).

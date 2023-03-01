@@ -1,0 +1,9 @@
+Crear la clase Biblioteca. La misma estará compuesta por un listado de libros y por un listado de socios. 
+Los socios estaran identificados por nombre, apellido y dni. Los libros estaran identificados por titulo, autor y 
+tematica.
+
+Los socios podran retirar uno o mas libros, y tambien podran devolverlos.
+
+Los libros podran tener dos condiciones, disponible o no disponible.
+
+Incorporar las funcionalidades que consideren necesarias (libre)

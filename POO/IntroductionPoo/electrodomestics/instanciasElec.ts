@@ -6,7 +6,7 @@ let electrodomesticoDos : Electrodomestico = new Electrodomestico("Heladera","LG
 let electrodomesticoTres :Electrodomestico = new Electrodomestico ("Cafetera" ,"Philips", 8000, "Black", 500, 3);
 let electrodomesticoCuatro :Electrodomestico = new Electrodomestico ("Cafetera" , "Nescafe", 5000, "White", 800, 2.5);
 
-console.log(electrodomesticoUno);
+console.table(electrodomesticoUno);
 
 console.log(`${electrodomesticoUno.getType()} ${electrodomesticoUno.getMarca()} Color ${electrodomesticoUno.getColor()} 
 $  ${electrodomesticoUno.getPrice()}`);

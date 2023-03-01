@@ -31,9 +31,6 @@ export class Electrodomestico {
         return this.marca;
     }
 
-
-
-
     //SET and GET of the price
     public setPrice(price :number) :void{
         this.price = price;
