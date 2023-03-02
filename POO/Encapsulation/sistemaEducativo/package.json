@@ -1,0 +1,11 @@
+{
+  "name": "sistema_educativo_ejercicio",
+  "version": "1.0.0",
+  "description": "Ejercicio de POO",
+  "main": "internSystem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
