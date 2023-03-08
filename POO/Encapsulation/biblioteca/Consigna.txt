@@ -7,3 +7,9 @@ Los socios podran retirar uno o mas libros, y tambien podran devolverlos.
 Los libros podran tener dos condiciones, disponible o no disponible.
 
 Incorporar las funcionalidades que consideren necesarias (libre)
+
+Crear la clase Biblioteca con sus atributos (nombre, direccion, telefono,localidad), constructor, getters y setters.
+La misma estará compuesta por libros (deben crear la clase libro completa y utilizarla
+como atributo de la Biblioteca).
+Crear instancias de la biblioteca y a traves de la misma consultar el nombre del libro y mostrarlo por consola.
+Crear una funcionalidad libre de la biblioteca y utilizarla para mostrar algun tipo de salida por consola.
