@@ -1,27 +1,38 @@
 "use strict";
 exports.__esModule = true;
 exports.Library = void 0;
+var booksManager_1 = require("./booksManager");
 var partner_1 = require("./partner");
 var utilClass_1 = require("./utilClass");
 var Library = /** @class */ (function () {
     //CONSTRUCTOR
-    function Library(libraryName, phone) {
+    function Library(libraryName, address, locality, phone) {
         this.libraryName = libraryName;
-        this.books = [];
+        this.address = address;
+        this.locality = locality;
+        this.bookManager = new booksManager_1.BookManager;
         this.partners = [];
         phone ? this.phone = phone : this.phone = "No data";
         this.utilClass = new utilClass_1.UtilClass();
     }
     //GETTERS AND SETTERS
-    Library.prototype.setName = function (name) { this.libraryName = name; };
+    Library.prototype.setLibraryName = function (libraryName) { this.libraryName = libraryName; };
     ;
-    Library.prototype.getName = function () { return this.libraryName; };
+    Library.prototype.getLibraryName = function () { return this.libraryName; };
+    ;
+    Library.prototype.setAddress = function (address) { this.address = address; };
+    ;
+    Library.prototype.getAddress = function () { return this.address; };
+    ;
+    Library.prototype.setLocality = function (locality) { this.locality = locality; };
+    ;
+    Library.prototype.getLocality = function () { return this.locality; };
     ;
     Library.prototype.setPhone = function (phone) { this.phone = phone; };
     ;
     Library.prototype.getPhone = function () { return this.phone; };
     ;
-    Library.prototype.getBooks = function () { return this.books; };
+    Library.prototype.getBookManager = function () { return this.bookManager; };
     Library.prototype.getPartners = function () { return this.partners; };
     Library.prototype.getUtilClass = function () { return this.utilClass; };
     //SPECIFIC METHODS
@@ -34,38 +45,18 @@ var Library = /** @class */ (function () {
             return socio;
         }
     };
-    Library.prototype.newBook = function (library, book) {
-        this.getBooks().push(book);
-        var index = this.search(library, book.getTitle());
-        this.books[index].setAvailability(true);
-        return book;
-    };
-    Library.prototype.search = function (library, title, dni) {
+    Library.prototype.searchPartner = function (library, dni) {
         var index = -1;
-        if (title) {
-            for (var count = 0; count < library.getBooks().length; count++) {
-                if (library.getBooks()[count].getTitle() === title) {
-                    index = count;
-                    return index;
-                }
-            }
-        }
-        else if (dni) {
-            for (var count = 0; count < library.getPartners().length; count++) {
-                if (library.getPartners()[count].getDni() === dni) {
-                    index = count;
-                    return index;
-                }
+        for (var count = 0; count < library.getPartners().length; count++) {
+            if (library.getPartners()[count].getDni() === dni) {
+                index = count;
+                return index;
             }
         }
         return index;
     };
-    Library.prototype.beAvailable = function (library, index) {
-        var available = library.getBooks()[index].getAvailability();
-        return available;
-    };
     Library.prototype.deletePartner = function (library, dni) {
-        var index = this.search(library, undefined, dni);
+        var index = this.searchPartner(library, dni);
         if (index >= 0) {
             this.getPartners().splice(index, 1);
         }

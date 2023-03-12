@@ -13,3 +13,15 @@ La misma estará compuesta por libros (deben crear la clase libro completa y uti
 como atributo de la Biblioteca).
 Crear instancias de la biblioteca y a traves de la misma consultar el nombre del libro y mostrarlo por consola.
 Crear una funcionalidad libre de la biblioteca y utilizarla para mostrar algun tipo de salida por consola.
+
+REFACTORIZACIÓN DE CÓDIGO:
+
+Usar los conceptos y recomendaciones vistas durante esta semana y la anterior
+Armar una base de datos de libros
+Hacer el planteo de las clases necesarias
+Implementar la clase Libro
+Implementar la clase GestorLibros → debe soportar insertar/consultar/modificar/eliminar libros (la entrada de información por teclado)
+Luego incorporar en donde se crea necesario un mecanismo para leer libros desde un archivo de texto
+Subir las cosas a GitHub y avisar por Slack
+
+

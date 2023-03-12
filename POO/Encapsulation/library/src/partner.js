@@ -47,11 +47,11 @@ var Partner = /** @class */ (function () {
     Partner.prototype.checkOutBooks = function (titles) {
         var booksCheckOut = 0;
         for (var count = 0; count <= titles.length; count++) {
-            var index = this.library.search(this.library, titles[count]);
+            var index = this.library.getBookManager().search(titles[count]);
             if (index >= 0) {
-                var available = this.library.beAvailable(this.library, index);
+                var available = this.library.getBookManager().beAvailable(index);
                 if (available) {
-                    this.library.getBooks()[index].setAvailability(false);
+                    this.library.getBookManager().getBooks()[index].setAvailability(false);
                     booksCheckOut++;
                 }
                 ;
@@ -62,11 +62,11 @@ var Partner = /** @class */ (function () {
     Partner.prototype.returnBooks = function (library, titles) {
         var booksReturn = 0;
         for (var count = 0; count <= titles.length; count++) {
-            var index = this.library.search(library, titles[count]);
+            var index = this.library.getBookManager().search(titles[count]);
             if (index >= 0) {
-                var available = this.library.beAvailable(library, index);
-                if (!available) {
-                    library.getBooks()[index].setAvailability(true);
+                var available = this.library.getBookManager().beAvailable(index);
+                if (available === false) {
+                    this.library.getBookManager().getBooks()[index].setAvailability(true);
                     booksReturn++;
                 }
             }

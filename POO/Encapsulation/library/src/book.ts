@@ -1,4 +1,5 @@
 import { UtilClass } from "./utilClass";
+import * as fs from 'fs';
 
 export class Book {
     private section :number;
@@ -8,15 +9,17 @@ export class Book {
     private genere :string;
     private availability :boolean;
     public utilClass :UtilClass;
+    public bookFile: string;
 
     //CONSTRUCTOR
-    public constructor(title :string, author :string, genere :string) {
+    public constructor(title :string, author :string, genere :string, urlBook: string) {
         this.section = Math.floor(Math.random()*100);
         this.shelf = Math.floor(Math.random()*100);
         this.title = title;
         this.author = author;
         this.genere = genere;
         this.availability = true;
+        this.bookFile = urlBook;
     }
 
     //GETTERS AND SETTERS
@@ -31,4 +34,20 @@ export class Book {
 
     public setAvailability(availability :boolean) :void{ this.availability = availability}
     public getAvailability() :boolean {return this.availability}
+
+    public showData():void {
+        console.log(`
+        -----------------------
+        Title:  ${this.title}
+        Author: ${this.author}
+        Genere: ${this.genere}
+        -----------------------
+    `);
+    }
+
+    public readBook(): void {
+        let fileContent = fs.readFileSync(this.bookFile, 'utf8');
+        console.log(fileContent);
+    }
+
 }
