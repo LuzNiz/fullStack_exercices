@@ -56,7 +56,7 @@ export class Partner {
     public checkOutBooks (titles: string[]): void{
         let booksCheckOut :number = 0;
         for(let count = 0; count <= titles.length; count++){
-            let index: number = this.library.getBookManager().search(titles[count]);
+            let index: number = this.library.getBookManager().searchBook(titles[count]);
             if(index >= 0) {
                 let available: boolean = this.library.getBookManager().beAvailable(index);
                 if(available){
@@ -71,7 +71,7 @@ export class Partner {
     public returnBooks(library :Library, titles: string[]): void {
         let booksReturn : number = 0;
         for(let count = 0; count <= titles.length; count++){
-            let index: number = this.library.getBookManager().search(titles[count]);
+            let index: number = this.library.getBookManager().searchBook(titles[count]);
             if(index >= 0) {
                 let available: boolean = this.library.getBookManager().beAvailable(index);
                 if(available === false){

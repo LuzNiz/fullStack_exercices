@@ -9,7 +9,7 @@ export class Book {
     private genere :string;
     private availability :boolean;
     public utilClass :UtilClass;
-    public bookFile: string;
+    private bookFile: string;
 
     //CONSTRUCTOR
     public constructor(title :string, author :string, genere :string, urlBook: string) {

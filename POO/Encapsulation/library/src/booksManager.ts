@@ -12,12 +12,12 @@ export class BookManager {
 
     public newBook(book : Book):Book{
         this.getBooks().push(book);
-        let index = this.search(book.getTitle());
+        let index = this.searchBook(book.getTitle());
         this.books[index].setAvailability(true);
         return book;
     }
 
-    public search(title: string): number{
+    public searchBook(title: string): number{
         let index :number = -1;
             for(let count = 0; count < this.getBooks().length; count ++){
                 if(this.getBooks()[count].getTitle() === title){
@@ -34,14 +34,14 @@ export class BookManager {
 
     
     public consultBook(title: string):void {
-        let index: number = this.search(title);
+        let index: number = this.searchBook(title);
         if(index >= 0){
             this.getBooks()[index].showData();
         }
     }
     
     public modifyBook(titlebook:string, newTitle? :string, newAuthor? :string, newGenere? :string): void{
-        let index: number = this.search(titlebook);
+        let index: number = this.searchBook(titlebook);
         if(newTitle){
             this.getBooks()[index].setTitle(newTitle);
         }else if(newAuthor){
@@ -52,7 +52,7 @@ export class BookManager {
     }
     
     public deleteBook(title: string): void{
-        let index = this.search(title);
+        let index = this.searchBook(title);
         if(index >= 0){
             this.getBooks().splice(index, 1);
         }
