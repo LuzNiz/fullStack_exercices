@@ -1,0 +1,1 @@
+Crear la clase juegoDecasino y de ese juego tienen que sacar dos herencias (dos hijos)

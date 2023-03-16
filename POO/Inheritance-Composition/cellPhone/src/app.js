@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var CellPhone_1 = require("./CellPhone");
+var simCard_1 = require("./simCard");
+var battery_1 = require("./battery");
+var batteryA70 = new battery_1.Battery(5000, "Samsung", "320F");
+var celularUno = new CellPhone_1.CellPhone("Samsung", "A70", batteryA70);
+console.log(celularUno.getInfo());
+var simCardUno = new simCard_1.SimCard("Claro", 2244567895);
+var simCardDos = new simCard_1.SimCard("Tuenti", 223276891);
+celularUno.setSimCard(simCardUno);
+celularUno.setSimCard(simCardDos);
+console.log(celularUno.getInfo());
+celularUno.removeSimCard(simCardUno);
+console.log(celularUno.getInfo());
