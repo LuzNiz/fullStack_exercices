@@ -1,0 +1,24 @@
+{
+  "name": "soccerteam",
+  "version": "1.0.0",
+  "description": "Object-oriented programming exercise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuzNiz/fullStack_exercices.git"
+  },
+  "keywords": [
+    "exercise",
+    "classes",
+    "POO"
+  ],
+  "author": "Luz Niz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuzNiz/fullStack_exercices/issues"
+  },
+  "homepage": "https://github.com/LuzNiz/fullStack_exercices#readme"
+}

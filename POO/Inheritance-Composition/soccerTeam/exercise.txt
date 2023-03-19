@@ -1,0 +1,9 @@
+Crear proyecto NPM
+Subir proyecto a GitHub
+Implementar una Selección de Fútbol, conformada por Futbolistas, Entrenador y Masajista.
+
+Cada integrante posee nombre, apellido, número de pasaporte y fecha de nacimiento.
+
+Aplicar herencia donde sea posible.
+Aplicar composición en UNA clase hija
+Elija un método de la clase padre y aplique polimorfismo en las clases Hijas
