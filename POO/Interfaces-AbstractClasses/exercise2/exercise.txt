@@ -1,0 +1,13 @@
+Ejercicio 2
+
+Iniciar proyecto NPM
+
+Implementar las siguientes clases con las variables y métodos que crea necesarios:
+
+AutoCiudad
+
+AutoDeportivo
+
+Camioneta
+
+Abstraer elementos en común entre dichas clases → pasarlos a una clase abstracta, y que las tres clases extiendan de ella

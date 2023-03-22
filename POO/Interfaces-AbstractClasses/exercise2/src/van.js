@@ -15,21 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Camioneta = void 0;
-var vehiculo_1 = require("./vehiculo");
-var Camioneta = /** @class */ (function (_super) {
-    __extends(Camioneta, _super);
-    function Camioneta(marca, modelo, anio) {
+exports.Van = void 0;
+var vehicle_1 = require("./vehicle");
+var Van = /** @class */ (function (_super) {
+    __extends(Van, _super);
+    function Van(marca, modelo, anio) {
         return _super.call(this, marca, modelo, anio) || this;
     }
-    Camioneta.prototype.acelerar = function () {
-        if (this.getEstaPrendido()) {
-            this.velocidadActual += 10;
+    Van.prototype.speedUp = function () {
+        if (this.getIsOn()) {
+            this.currentSpeed += 10;
         }
     };
-    Camioneta.prototype.showInfo = function () {
+    Van.prototype.showInfo = function () {
         return this;
     };
-    return Camioneta;
-}(vehiculo_1.Vehiculo));
-exports.Camioneta = Camioneta;
+    return Van;
+}(vehicle_1.Vehicle));
+exports.Van = Van;

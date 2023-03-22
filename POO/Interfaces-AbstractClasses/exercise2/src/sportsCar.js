@@ -15,21 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.AutoCiudad = void 0;
-var vehiculo_1 = require("./vehiculo");
-var AutoCiudad = /** @class */ (function (_super) {
-    __extends(AutoCiudad, _super);
-    function AutoCiudad(marca, modelo, anio) {
+exports.SportsCar = void 0;
+var vehicle_1 = require("./vehicle");
+var SportsCar = /** @class */ (function (_super) {
+    __extends(SportsCar, _super);
+    function SportsCar(marca, modelo, anio) {
         return _super.call(this, marca, modelo, anio) || this;
     }
-    AutoCiudad.prototype.acelerar = function () {
-        if (this.getEstaPrendido()) {
-            this.velocidadActual += 5;
+    SportsCar.prototype.speedUp = function () {
+        if (this.getIsOn()) {
+            this.currentSpeed += 16;
         }
     };
-    AutoCiudad.prototype.showInfo = function () {
+    SportsCar.prototype.showInfo = function () {
         return this;
     };
-    return AutoCiudad;
-}(vehiculo_1.Vehiculo));
-exports.AutoCiudad = AutoCiudad;
+    return SportsCar;
+}(vehicle_1.Vehicle));
+exports.SportsCar = SportsCar;

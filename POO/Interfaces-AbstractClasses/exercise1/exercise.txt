@@ -1,0 +1,7 @@
+Ejercicio 1
+
+Iniciar proyecto NPM
+
+Implementar el siguiente diagrama de clases
+
+Subir a GitHub y avisar por Slack
