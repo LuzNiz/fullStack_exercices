@@ -14,4 +14,5 @@ export class Camioneta extends Vehiculo  {
     public showInfo(): Camioneta {
         return this;
     }
+    
 }
