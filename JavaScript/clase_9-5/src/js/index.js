@@ -10,7 +10,7 @@ function createElement(name, picture, address){
     card.classList.add("card");
     card.innerHTML =`
     <h2>${name}</h2>
-    <img src= ${picture} alt= ${name}></img>
+    <img src= ${picture} alt= ${name}>
     <h3>${address}</h3>
     `;
     return card;

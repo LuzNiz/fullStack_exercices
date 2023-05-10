@@ -1,9 +1,10 @@
-body{
+main{
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content:space-between;
+    height: 95vh;
 }
-header{
+.container-30{
     width: 30%;
     margin: 2% 1% 2% 3%;
     height: max-content;
@@ -12,7 +13,7 @@ header{
     flex-wrap: wrap;
 }
 
-header > h1{
+.container-30 > h1{
     width: 90%;
     font-size: 55px;
     height: max-content;
@@ -20,16 +21,18 @@ header > h1{
     margin-bottom: 55px;
 }
 
-header > p{
+.container-30 > p{
     width: 90%;
     text-align: justify;
 }
 #cards-container{
     width: 90%;
+    height: 90vh;
     margin: 3% 3% 3% 0%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: scroll;
 }
 .card {
     display: flex;
@@ -37,7 +40,7 @@ header > p{
     justify-content: center;
     flex-wrap: wrap;
     padding: 3%;
-    margin: 1%;
+    margin: 1.5%;
     width: 10vw;
     height: 32vh;
     box-shadow: 3px 3px 10px 2px rgba(78, 77, 77, 0.5);
