@@ -34,6 +34,19 @@ main{
     justify-content: center;
     overflow-y: scroll;
 }
+
+#cards-container::-webkit-scrollbar {
+    width: 12px;
+}
+#cards-container::-webkit-scrollbar-track {
+    background: white;
+}
+
+#cards-container::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 176, 177);
+    border-radius: 20px;
+    border: 3px solid rgb(176, 176, 177);
+}
 .card {
     display: flex;
     align-items: center;
