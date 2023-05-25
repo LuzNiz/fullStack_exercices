@@ -1,7 +1,7 @@
-import { obtenerDatos } from "./api.recuest.js";
+import { getData } from "./api.recuest.js";
 
-const contenedorStudents = document.getElementById("cards-students");
-const contenedorStaff = document.getElementById("cards-staff");
+const containerStudents = document.getElementById("cards-students");
+const containerStaff = document.getElementById("cards-staff");
 
 function createCards(urlImg, name, house, dateBirth, ancestry ) {
     const card = document.createElement("div");
@@ -18,17 +18,17 @@ function createCards(urlImg, name, house, dateBirth, ancestry ) {
     return card;
 }
 
-obtenerDatos()
+getData()
 .then( // Cuando tenga los datos, ejecuto la siguiente función
-    datos => {
-        console.log(datos.slice(0,15))
-        datos.slice(0, 11).forEach(element => {
+    data => {
+        console.log(data.slice(0,15))
+        data.slice(0, 11).forEach(element => {
             if(element.hogwartsStudent){
                 let card = createCards(element.image, element.name, element.house, element.dateOfBirth, element.ancestry);
-                contenedorStudents.appendChild(card);
+                containerStudents.appendChild(card);
             }if(element.hogwartsStaff){
                 let card = createCards(element.image, element.name, element.house, element.dateOfBirth, element.ancestry);
-                contenedorStaff.appendChild(card)
+                containerStaff.appendChild(card)
             }
         });
     }
