@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('../img/fondo.jpg');
+}
+section {
+    width: 100%;
+    height: 42.88rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+}
+
+section article:first-child {
+    width: 40%;
+    padding: 3%;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(98px);
+    
+}
+
+article:first-child {
+    color: white;
+    text-align: center;
+}
+
+#calculator {
+    width: 35%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: 4% 8% 3% 4%;
+    border-radius: 10px;
+    background-color: #112C36;
+    box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.1);
+}
+
+#calculator > article {
+    backdrop-filter: blur(8px);
+    width: 75%;
+    height: 10%;
+    margin: 3%;
+    background-color: #9AA3A6;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 7px 4px rgba(0, 0, 0, 0.1);
+    font-size: 6rem;
+
+}
+
+#calculator > article:first-child {
+    height: 10%;
+    font-size: 1rem;
+    text-align: end;
+    margin-bottom: 1%;
+}
+#calculator > article :last-child {
+    font-size: 2rem;
+}
+
+table {
+    width: 85%;
+    height: 80%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+table > tbody {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    flex-wrap: wrap;
+}
+tr {
+    margin: 2%;
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+tr > td {
+    background: #96A2A7;
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    margin-right: 2%;
+    text-align: center;
+    font-size: 2rem;
+    box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+tbody:last-of-type tr:nth-last-child(2) td:first-child{
+    width: 157%;
+}
+
+tbody:last-of-type tr:last-child td:last-child{
+    background: #12191C;
+    color: white;
+    vertical-align: middle;
+    width: 100%;
+}
+
+td:hover{
+    transform: scale(1.05);
+}
