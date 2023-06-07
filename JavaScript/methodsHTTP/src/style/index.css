@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+}
+
+body{
+    background-image: url('../img/fondo.jpg');
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    backdrop-filter: blur(8px);
+}
+
+article{
+    width: 0.2vh;
+    height: 0.2vh;
+    padding: 2%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background-color: green;
+    justify-content: center;
+    color: white;
+    font-size: 4vh;
+}
+
+main > div:first-child  {
+    height: 40%;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    padding: 1% 1% 1% 1%;
+    align-items: end;
+    color: white;
+    margin-left: 8%;
+}
+
+
+
+a{
+    color: white;
+    font-weight: bold;
+}
+
+h2 {
+    width: 70%;
+    margin: 3% 2% 3% 1%;
+    font-size: 6vh;
+    font-weight: 900;
+}
+
+p {
+    width: 70%;
+    font-size: 2.5vh;
+    padding: 0.5%;
+}
+main > div:last-child  {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    padding: 1% 1% 1% 9%;
+}
+
+.table-minimalist {
+    width: 90%;
+    border-collapse: collapse;
+    height: 10vh;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.table-minimalist th,
+.table-minimalist td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-minimalist th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table-minimalist tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-minimalist tbody tr:hover {
+    background-color: #ebebeb;
+}
